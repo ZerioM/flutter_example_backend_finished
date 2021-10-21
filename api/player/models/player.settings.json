@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "players",
+  "info": {
+    "name": "Player",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "playerid": {
+      "type": "string",
+      "regex": "[^\\s]"
+    },
+    "items": {
+      "via": "players",
+      "collection": "items"
+    }
+  }
+}
